@@ -553,7 +553,7 @@ background-repeat: no-repeat;
 </style>
 <center>
 <div class="lead-form-box" id="forms">
-<form action="api.php" id="lead-form"  method="POST"       class="   orderForm     " >
+<form id="lead-form"  method="POST"       class="   orderForm     " >
 <img src="assets/images/med.png" style="max-width:100px;margin-top:20px;">
 <h2>Official application form</h2>
 <br>
@@ -817,6 +817,27 @@ background-repeat: no-repeat;
     $('html, body').stop().animate({ scrollTop: ($('#forms').offset().top) }, 1500);
   });
 });
-</script>
-</body>
+</script><script src="https://snippet.infothroat.com/dist/api/lead.min.js"></script>
+<script>
+    drlead.init({
+        params: {
+            token: "YWJHZJMXMMITM2EZNY00MWNILTKYNZGTOTDLYZI4ZMFMZTI5", // required
+            stream_code: "lww5c", // required
+            thanks_page: "/thanks"
+        },
+        subs: {
+            sub1: drlead.queryGet("sub1"),
+            sub2: drlead.queryGet("sub2"),
+            sub3: drlead.queryGet("sub3"),
+            sub4: drlead.queryGet("sub4"),
+            sub5: drlead.queryGet("sub5")
+        },
+        callback: function (error, response) {
+
+        },
+        before: function () {
+            // before request done
+        }
+    });
+</script></body>
 </html>
